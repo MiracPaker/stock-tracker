@@ -1,8 +1,10 @@
 [
   {
-    "site":"zara",
-    "url":"https://www.zara.com/tr/tr/cift-tarafli-suni-kurk-bomber-ceket-p00993400.html?v1=503417196",
-    "size":"M",
-    "name":"Zara Bomber"
-  },
+    "site": "zara",
+    "name": "Zara Çift Taraflı Suni Kürk Bomber",
+    "url": "https://www.zara.com/tr/tr/cift-tarafli-suni-kurk-bomber-ceket-p00993400.html?v1=503417196",
+    "productId": "503417196",
+    "store": "11766",
+    "size": "M"
+  }
 ]
