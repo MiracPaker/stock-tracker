@@ -1,21 +1,18 @@
-products.json
+import json
+from app.zara import check_zara
 
-↓
 
-for product
+def check():
 
-↓
+    with open("products.json", "r", encoding="utf-8") as file:
+        products = json.load(file)
 
-site
+    results = []
 
-↓
+    for product in products:
 
-zara.py
+        if product["site"] == "zara":
 
-↓
+            results.append(check_zara(product))
 
-nike.py
-
-↓
-
-boyner.py
+    return results
