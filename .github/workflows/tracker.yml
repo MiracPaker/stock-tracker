@@ -2,7 +2,6 @@ name: Stock Tracker
 
 on:
   workflow_dispatch:
-
   schedule:
     - cron: "*/15 * * * *"
 
@@ -22,10 +21,10 @@ jobs:
       - name: Paketleri Kur
         run: |
           pip install -r requirements.txt
+          python -m playwright install chromium
 
       - name: Tracker Çalıştır
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          python tracker.py
+        run: python tracker.py
