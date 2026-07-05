@@ -21,7 +21,7 @@ jobs:
       - name: Paketleri Kur
         run: |
           pip install -r requirements.txt
-          playwright install
+          python -m playwright install chromium
 
       - name: Tracker Çalıştır
         env:
