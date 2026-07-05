@@ -3,7 +3,7 @@ name: Stock Tracker
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   run:
@@ -19,9 +19,9 @@ jobs:
           python-version: "3.12"
 
       - name: Paketleri Kur
-  run: |
-    pip install -r requirements.txt
-    python -m playwright install chromium
+        run: |
+          pip install -r requirements.txt
+          playwright install
 
       - name: Tracker Çalıştır
         env:
