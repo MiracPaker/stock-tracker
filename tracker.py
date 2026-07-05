@@ -1,7 +1,18 @@
-from app.notifier import send
 from app.checker import check
+from app.notifier import send
 
-print("Stock Tracker başladı")
+results = check()
 
-if check():
-    send("🚀 Stock Tracker başarıyla çalışıyor.")
+for item in results:
+
+    if item["instock"]:
+
+        send(
+            f"""🟢 STOĞA GİRDİ
+
+{item["name"]}
+
+Beden: {item["size"]}
+
+{item["url"]}"""
+        )
